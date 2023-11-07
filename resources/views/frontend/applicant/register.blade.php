@@ -48,19 +48,39 @@
 <body>
     <div class="container mt-5" style="padding-top: 100px;">
         <h2 class="text-center mb-5" style="color: #25477B; font-weight: 700;">Buat profil<br>JobFinder mu</h2>
-        <form class="m-5 p-2" action="/pelamar-register" method="post">
+        <form class="m-5 p-2" method="POST" action="{{ route('register') }}">
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="namadepan" placeholder="First Name" name="first_name" value="{{ old('first_name')}}" required>
+                    <input type="text" class="form-control @error('namadepan') is-invalid @enderror" id="namadepan"
+                     placeholder="Nama Depan" name="nama-depan" value="{{ old('first_name')}}" required>
+
+                    @error('namadepan')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
                 <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="namabelakang" placeholder="Last Name" name="last_name" value="{{ old('last_name')}}" required>
+                    <input type="text" class="form-control @error('namabelakang') is-invalid @enderror" id="namabelakang"
+                    placeholder="Nama Belakang" name="last_name" value="{{ old('last_name')}}" required>
+                    @error('namabelakang')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="{{ old('email')}}" required>
+                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                     name="email" value="{{ old('email') }}" placeholder="E-mail" required autocomplete="email">
+
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
                 <div class="form-group col-md-6">
                     <input type="password" class="form-control" id="password" placeholder="Password" name="password" value="{{ old('password')}}" required>

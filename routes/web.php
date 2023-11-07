@@ -69,13 +69,13 @@ Auth::routes(['verify' => true]);
 
 Route::resource('perusahaan-lowongan', LowonganPerusahaanController::class);
 
-Route::resource('pelamar-register', UsersController::class);
+// Route::resource('pelamar-register', App\Http\Controllers\Auth\RegisterController::class);
 
 // Route::get('/login', [LoginPelamarController::class, 'login'])->name('login');
 
-Route::post('/login', [LoginController::class, 'login'])->name('login');
+// Route::post('/login', [LoginController::class, 'login'])->name('login');
 
-Route::post('/logout', [LoginPelamarController::class,'logout']);
+// Route::post('/logout', [LoginPelamarController::class,'logout']);
 
 Route::get('/login-perusahaan', [LoginPerusahaanController::class, 'login']);
 

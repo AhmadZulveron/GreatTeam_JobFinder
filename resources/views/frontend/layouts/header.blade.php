@@ -63,7 +63,8 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
             <a class="nav-link avatar-with-name" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#">
-              {{-- {{ Auth::user()->first_name }} {{ Auth::user()->last_name }} --}}username
+              {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
+              {{-- username --}}
               <img src="/images/Windows_10_Default_Profile_Picture.svg.png" width="36px" class="d-inline-block align-top" alt="">
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">

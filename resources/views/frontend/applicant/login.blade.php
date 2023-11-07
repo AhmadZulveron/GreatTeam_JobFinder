@@ -29,37 +29,41 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 left-pane">
+        <div class="col-lg-6 col-md-6 left-pane">
             <div class="logo">JobFinder<img src="images/logo-i.png" width="54px" alt="Logo"></div>
             <div class="slk">
                 <p>Selamat datang kembali</p>
             </div>
             <form method="POST" action="{{ route('login') }}">
-                @csrf <!-- Tambahkan CSRF token -->
-                <div class="form-group">
-                    <input class="email-input form-control @error('email') is-invalid @enderror"
-                     style="margin-bottom: 20px" type="email" placeholder="E-mail" name="email"
-                     value="{{ old('email')}}" required autocomplete="email" autofocus>
-                     @error('email')
-                    <div class="invalid-feedback">
-                    {{ $message }}
-                    </div>
-                    @enderror
-                </div>
-                <div class="form-group">
-                    <input class="email-input form-control @error('password') is-invalid @enderror"
-                     type="password" id="exampleDropdownFormPassword1" placeholder="Password" name="password" required>
-                     @error('password')
-                    <div class="invalid-feedback">
+                @csrf
+                {{-- <div class="form-row"> --}}
+                    <div class="form-group">
+                        <input class="email-input form-control @error('email') is-invalid @enderror"
+                        type="email" placeholder="E-mail" name="email"
+                        value="{{ old('email')}}" required autocomplete="email" autofocus>
+                        @error('email')
+                        <div class="invalid-feedback">
                         {{ $message }}
+                        </div>
+                        @enderror
                     </div>
-                    @enderror
-                </div>
+                {{-- </div> --}}
+                {{-- <div class="form-row"> --}}
+                    <div class="form-group">
+                        <input class="email-input form-control @error('password') is-invalid @enderror"
+                        type="password" id="exampleDropdownFormPassword1" placeholder="Password" name="password" required>
+                        @error('password')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                    </div>
+                {{-- </div> --}}
                 <div class="form-group">
                     <button type="submit" class="btn-login mt-4">Login</button>
                 </div>
                 <div class="d-flex p-2 bd-highlight sp">
-                    <small><a href="/pelamar-register">Daftar</a> | <a href="#">Lupa Password?</a></small>
+                    <small><a href="{{ route('register') }}">Daftar</a> | <a href="#">Lupa Password?</a></small>
                 </div>
             </form>
         </div>

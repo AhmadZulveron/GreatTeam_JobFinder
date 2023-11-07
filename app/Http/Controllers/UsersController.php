@@ -12,7 +12,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('frontend.applicant.register');
+        return view('auth.register');
     }
 
     /**

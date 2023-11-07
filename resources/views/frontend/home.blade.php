@@ -39,7 +39,7 @@
                felis, in luctus nulla. Aenean vel sagittis velit.</p>
             <form action="" class="button-group">
                <ul>
-                  <li class="btn-1"><a href="/login">PELAMAR</a></li>
+                  <li class="btn-1"><a href="{{ route('login') }}">PELAMAR</a></li>
                   <li class="btn-2"><a href="/login-perusahaan">PERUSAHAAN</a></li>
                </ul>
             </form>
