@@ -1,0 +1,114 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.left-pane {
+    float: left;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(333deg, rgba(107, 144, 201, 0.00) 0%, rgba(84, 127, 193, 0.48) 0.01%, #3A6CB9 46.98%, #3A6CB9 74.06%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* panel kanan */
+.right-pane {
+    float: right;
+    width: 50%;
+    height: 100vh;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .d-flex {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.logo{
+    font-size: 36px;
+    margin: 2.5rem;
+    font-family: KoHo;
+    margin-top: 100px;
+}
+
+.right-pane form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-input{
+    width: 550px;
+    height: 73px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    border: 2px solid #a0a0a0;
+    background: #FFF;
+    color: #929292;
+    text-align: left;
+    font-family: KoHo;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 15px;
+}
+
+.btn-login{
+    width: 550px;
+    height: 73px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    border: 1px solid #25477B;
+    background: #3A6CB9;
+    color: #DFDFDF;
+    text-align: center;
+    font-family: KoHo;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sp{
+    color: #25477B;
+    font-family: KoHo;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px
+}
+
+.sp a{
+    text-decoration: none;
+}
+
+.slk{
+    color: #25477B;
+    text-align: center;
+    font-family: KoHo;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+.outer-container {
+    display: flex;
+}
+
+.img{
+    width: 414px;
+    height: 414px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}

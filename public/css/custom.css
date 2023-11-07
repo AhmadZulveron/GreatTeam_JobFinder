@@ -1,0 +1,19 @@
+.navbar{
+    color: #000;
+    font-family: KoHo;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.linku{
+    border-radius: 5px;
+}
+
+.linku:hover{
+    background: #cdcdcd;
+}
+
+.low-line{
+}
