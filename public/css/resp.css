@@ -11,6 +11,10 @@
 
 .rounded-panel {
     border-radius: 10px;
+}
+
+.rounded-panel-e {
+    border-radius: 10px;
     margin: 10px;
 }
 

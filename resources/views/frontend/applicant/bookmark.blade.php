@@ -4,15 +4,15 @@
 @section('content')
 
 {{-- @foreach ($lokers as $loker) --}}
-<div class="pl-5 nav-scroller py-1 mb-3 border-bottom" style="font-family: KoHo; background: #f0f0f0;">
+<div class="pl-5 nav-scroller py-1 mb-3 border-bottom" style="font-family: KoHo; background: #ABBCCB;">
     <nav class="nav nav-underline justify-content-left">
       <a class="nav-item nav-link low-line" href="/lowongan-foryou" style="font-weight: 500; color: rgb(129, 129, 129);">For You</a>
       <a class="nav-item nav-link active" style="font-weight: 500; color: rgb(129, 129, 129);" href="/lowongan-explore">Explore</a>
       <a class="nav-item nav-link low-line" href="/lowongan-bookmark" style="font-weight: 500; color: black; background: linear-gradient(to top, #25477b8d 5.94%, rgba(118, 118, 118, 0) 5.26%);">Bookmark</a>
     </nav>
 </div>
-<div class="container-fluid w-100" style="background-color: #D2DCFF;">
-        <div class="rounded-panel" style="background-color: #D2DCFF;">
+<div class="container-fluid" style="background-color: #D2DCFF; min-height: 100vh">
+        {{-- <div class="rounded-panel" style="background-color: #D2DCFF;"> --}}
             <div class="row" style="padding-top: 10px">
                 @for ($i = 0; $i < 1; $i++)
                 <div class="col-md-4">
@@ -45,7 +45,7 @@
                 </div>
                 @endfor
             </div>
-        </div>
+        {{-- </div> --}}
         <button class="btn back-to-top" id="backToTopButton">
             <img src="/images/arrow-up-1.png" alt="" width="54px">
         </button>
