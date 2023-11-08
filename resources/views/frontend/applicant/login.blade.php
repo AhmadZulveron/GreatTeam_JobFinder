@@ -36,7 +36,6 @@
             </div>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
-                {{-- <div class="form-row"> --}}
                     <div class="form-group">
                         <input class="email-input form-control @error('email') is-invalid @enderror"
                         type="email" placeholder="E-mail" name="email"
@@ -47,8 +46,6 @@
                         </div>
                         @enderror
                     </div>
-                {{-- </div> --}}
-                {{-- <div class="form-row"> --}}
                     <div class="form-group">
                         <input class="email-input form-control @error('password') is-invalid @enderror"
                         type="password" id="exampleDropdownFormPassword1" placeholder="Password" name="password" required>
@@ -58,12 +55,11 @@
                         </div>
                         @enderror
                     </div>
-                {{-- </div> --}}
                 <div class="form-group">
                     <button type="submit" class="btn-login mt-4">Login</button>
                 </div>
                 <div class="d-flex p-2 bd-highlight sp">
-                    <small><a href="{{ route('register') }}">Daftar</a> | <a href="#">Lupa Password?</a></small>
+                    <small><a href="/registerp">Daftar</a> | <a href="#">Lupa Password?</a></small>
                 </div>
             </form>
         </div>

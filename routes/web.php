@@ -5,7 +5,9 @@ use App\Http\Controllers\LoginPelamarController;
 use App\Http\Controllers\LoginPerusahaanController;
 use App\Http\Controllers\LowonganPerusahaanController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Auth\LoginController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,11 +34,24 @@ Route::get('/admin', function () {
 
 Route::get('/your-profile', function () {
     return view('frontend.applicant.jenisjob');
-});
+})->middleware(['auth', 'verified']);
 
-Route::get('/verify-your-account', function () {
-    return view('frontend.verify');
-});
+
+// register //
+
+Route::get('/registerp', [AuthController::class, 'register']);
+Route::post('/registerp', [AuthController::class, 'registerProses']);
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+
+    return redirect('/your-profile');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+// end register //
 
 Route::get('perusahaan-dashboard', [LowonganPerusahaanController::class, 'index2']);
 
@@ -58,27 +73,20 @@ Route::get('/lowongan-explore', function () {
 
 Route::get('/lowongan-foryou', function () {
     return view('frontend.applicant.foryou');
-});
+})->middleware(['auth', 'verified']);
 
 Route::get('/lowongan-bookmark', function () {
     return view('frontend.applicant.bookmark');
-});
+})->middleware(['auth', 'verified']);
 
 
 Auth::routes(['verify' => true]);
 
 Route::resource('perusahaan-lowongan', LowonganPerusahaanController::class);
 
-// Route::resource('pelamar-register', App\Http\Controllers\Auth\RegisterController::class);
-
-// Route::get('/login', [LoginPelamarController::class, 'login'])->name('login');
-
-// Route::post('/login', [LoginController::class, 'login'])->name('login');
-
-// Route::post('/logout', [LoginPelamarController::class,'logout']);
 
 Route::get('/login-perusahaan', [LoginPerusahaanController::class, 'login']);
 
 Route::post('/login-perusahaan', [LoginPerusahaanController::class, 'athenticate']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);

@@ -24,8 +24,8 @@
             <div class="nav-link">
                <ul>
                   <li><a href="#">ABOUT US</a></li>
-                  <li><a href="/daftar-lowongan">LOWONGAN</a></li>
-                  <li><a href="/daftar-perusahaan">PERUSAHAAN</a></li>
+                  <li><a href="/lowongan-explore">LOWONGAN</a></li>
+                  <li><a href="/perusahaan">PERUSAHAAN</a></li>
                   <li><a href="#">CONTACT</a></li>
                </ul>
             </div>

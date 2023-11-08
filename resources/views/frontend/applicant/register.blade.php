@@ -48,12 +48,12 @@
 <body>
     <div class="container mt-5" style="padding-top: 100px;">
         <h2 class="text-center mb-5" style="color: #25477B; font-weight: 700;">Buat profil<br>JobFinder mu</h2>
-        <form class="m-5 p-2" method="POST" action="{{ route('register') }}">
+        <form class="m-5 p-2" method="POST" action="/registerp">
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <input type="text" class="form-control @error('namadepan') is-invalid @enderror" id="namadepan"
-                     placeholder="Nama Depan" name="nama-depan" value="{{ old('first_name')}}" required>
+                     placeholder="Nama Depan" name="first_name" value="{{ old('first_name')}}" required>
 
                     @error('namadepan')
                         <span class="invalid-feedback" role="alert">
