@@ -54,7 +54,7 @@
     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link linku" href="/lowongan-foryou">Lowongan</a>
+                <a class="nav-link linku" href="/lowongan-explore">Lowongan</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link linku" href="/perusahaan">Perusahaan</a>

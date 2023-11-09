@@ -61,7 +61,7 @@
             <div class="progress-bar" role="progressbar" style="width: 33.33%;" aria-valuenow="33.33" aria-valuemin="0" aria-valuemax="100"></div>
         </div> --}}
         <div class="d-flex flex-row flex-column mt-5">
-            <form class="align-self-center" id="registration-form" action="/pelamar-register" method="post">
+            <form class="align-self-center" id="registration-form" action="/upload">
                 <!-- Langkah 1 -->
                 
                 <div class="step step-1">
@@ -160,7 +160,7 @@
                     </div>
                     <h2 class="text-center mb-5" style="color: #25477B; font-weight: 700;">Background pendidikan terakhirmu</h2>
                     <h5 class="text-center mb-5 p-3 align-self-center" style="color: #292929; border-radius: 7px; border: 1px solid #E7E7E7; background: #C9DEFD;">
-                        Digunakan untuk mencari rekomendasi pekerjaan yang<br>pas untukmu
+                        Beritahu latar pendidikanmu untuk mendapatkan 23%<br>wawancara lebih banyak
                     </h5>
                     <div class="form-row">
                         <div class="form-group col-md-12">

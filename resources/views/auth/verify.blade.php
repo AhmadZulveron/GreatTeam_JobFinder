@@ -87,11 +87,11 @@
                             </div>
                         @endif
     
-                        {{ __('Before proceeding, please check your email for a verification link.') }}
-                        {{ __('If you did not receive the email') }},
+                        {{ __('Email Verifikasi telah dikirim. Silahkan klik cek email Anda.') }}
+                        {{ __('Jika anda tidak menerima email') }},
                         <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                             @csrf
-                            <button type="submit" class="btn btn-link p-0">{{ __('click here to request another') }}</button>
+                            <button type="submit" class="btn btn-link p-0">{{ __('Klik disini') }}</button> untuk kirim ulang
                         </form>
                     </div>
                 </div>

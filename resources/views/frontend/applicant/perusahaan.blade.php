@@ -3,9 +3,9 @@
 @section('content')
 
 <div class="container-fluid" style="background-color: #D2DCFF; font-family: KoHo">
-    <div class="col-md-4 pt-3">
+    <div class="col-md-4 pt-3 pl-0">
         <div class="input-group">
-            <input class="form-control py-2 rounded-pill mr-1 pr-5" type="search" placeholder="Search" id="example-search-input">
+            <input class="form-control py-2 rounded-pill mr-1" type="search" placeholder="Search" id="example-search-input">
             <span class="input-group-append">
                 <button class="btn rounded-pill border-0 ml-n5" type="button">
                     <i class="fa fa-search"><img src="/images/search.png" width="24px" alt=""></i>
@@ -13,8 +13,8 @@
             </span>
         </div>
     </div>
-    <div class="d">
-        <div class="rounded-panel" style="background-color: #D2DCFF;">
+    <div class="con">
+        <div class="rounded-panel mt-3" style="background-color: #D2DCFF;">
             <div class="row">
                 @for ($i = 0; $i < 20; $i++)
                 <div class="col-md-4">

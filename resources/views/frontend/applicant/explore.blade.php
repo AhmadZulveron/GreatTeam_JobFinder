@@ -6,9 +6,16 @@
 {{-- @foreach ($lokers as $loker) --}}
 <div class="pl-5 nav-scroller py-1 mb-3 border-bottom" style="font-family: KoHo; background: #ABBCCB;">
     <nav class="nav nav-underline justify-content-left">
-      <a class="nav-item nav-link low-line" href="/lowongan-foryou" style="font-weight: 500; color: rgb(129, 129, 129);">For You</a>
-      <a class="nav-item nav-link active" style="font-weight: 500; color: black; background: linear-gradient(to top, #25477b8d 5.94%, rgba(118, 118, 118, 0) 5.26%);" href="/lowongan-explore">Explore</a>
-      <a class="nav-item nav-link low-line" href="/lowongan-bookmark" style="font-weight: 500; color: rgb(129, 129, 129);">Bookmark</a>
+    @guest
+        @if (Route::has('login'))
+            <a class="nav-item nav-link low-line" href="/lowongan-foryou" style="font-weight: 500; color: rgb(129, 129, 129);">For You</a>
+            <a class="nav-item nav-link active" style="font-weight: 500; color: black; background: linear-gradient(to top, #25477b8d 5.94%, rgba(118, 118, 118, 0) 5.26%);" href="/lowongan-explore">Explore</a>
+        @endif
+    @else
+        <a class="nav-item nav-link low-line" href="/lowongan-foryou" style="font-weight: 500; color: rgb(129, 129, 129);">For You</a>
+        <a class="nav-item nav-link active" style="font-weight: 500; color: black; background: linear-gradient(to top, #25477b8d 5.94%, rgba(118, 118, 118, 0) 5.26%);" href="/lowongan-explore">Explore</a>
+        <a class="nav-item nav-link low-line" href="/lowongan-bookmark" style="font-weight: 500; color: rgb(129, 129, 129);">Bookmark</a>
+    @endguest
     </nav>
 </div>
 <div class="container-fluid" style="background-color: #D2DCFF; min-height: 100vh">

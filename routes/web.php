@@ -32,9 +32,15 @@ Route::get('/admin', function () {
     return view('backend.dashboard');
 });
 
+// setting up profile
+
 Route::get('/your-profile', function () {
     return view('frontend.applicant.jenisjob');
 })->middleware(['auth', 'verified']);
+
+Route::get('/upload', function(){
+    return view('frontend.applicant.upload');
+});
 
 
 // register //
@@ -52,6 +58,8 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 // end register //
+
+
 
 Route::get('perusahaan-dashboard', [LowonganPerusahaanController::class, 'index2']);
 
