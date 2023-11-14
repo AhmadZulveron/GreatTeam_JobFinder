@@ -14,11 +14,12 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@600&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/frontend.css">
+   <link rel="stylesheet" href="css/frontend.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
  </head>
  <body>
    <div class="background">
-      <div class="overlay">
+      <div class="overlay container-fluid h-100">
          <nav class="navbar">
             <div class="brand">JobFinder <img src="images/logo-i.png" width="24px" alt="Logo"></div>
             <div class="nav-link">
@@ -30,7 +31,7 @@
                </ul>
             </div>
           </nav>
-          <div class="container">
+          <div class="container container-fluid">
             <h1>Job<br>Finder</h1>
             <p>Vivamus ullamcorper metus eu mauris tristique commodo.
                Nam finibus est nec ipsum semper, a pretium nisl rutrum.

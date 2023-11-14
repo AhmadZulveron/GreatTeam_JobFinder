@@ -45,8 +45,8 @@ Route::get('/upload', function(){
 
 // register //
 
-Route::get('/registerp', [AuthController::class, 'register']);
-Route::post('/registerp', [AuthController::class, 'registerProses']);
+Route::get('/registrasi', [AuthController::class, 'register']);
+Route::post('/registrasi', [AuthController::class, 'registerProses']);
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
 })->middleware('auth')->name('verification.notice');
