@@ -48,7 +48,7 @@
 <body>
     <div class="container mt-5" style="padding-top: 100px;">
         <h2 class="text-center mb-5" style="color: #25477B; font-weight: 700;">Buat profil<br>JobFinder mu</h2>
-        <form class="m-5 p-2" method="POST" action="/registerp">
+        <form class="m-5 p-2" method="POST" action="/registrasi">
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -88,7 +88,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <select class="selectpicker form-control" name="location" id="location" data-live-search="true" value="{{ old('location')}}" required>
+                    <select class="selectpicker form-control" name="address" id="location" data-live-search="true" value="{{ old('address')}}" required>
                         <option value="">Pilih Lokasi</option>
                         <option value="location1">Limau Manis 1</option>
                         <option value="location2">Limau Manis 2</option>

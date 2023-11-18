@@ -39,6 +39,6 @@ class LoginPelamarController extends Controller
  
         $request->session()->regenerateToken();
  
-        return redirect('/daftar-lowongan');
+        return redirect('/lowongan-explore');
     }
 }

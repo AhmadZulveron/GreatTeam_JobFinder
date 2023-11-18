@@ -138,7 +138,6 @@
     <div class="card">
         <div class="card-header">
             <h4 class="card-title">Data Lowongan</h4>
-            {{-- <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">Buka Lowongan</button> --}}
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -153,7 +152,7 @@
                             <th>action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    {{-- <tbody>
                         @foreach ($lowongans as $item)
                         <tr>
                             <th>{{$loop->iteration}}</th>
@@ -173,7 +172,6 @@
                             </td>
                         </tr>
 
-                        <!-- Modal Update -->
                         <div class="modal fade" id="exampleModalCenter2-{{ $item->id }}">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
@@ -213,7 +211,7 @@
                             </div>
                         </div>
                         @endforeach
-                    </tbody>
+                    </tbody> --}}
                 </table>
             </div>
         </div>
@@ -223,8 +221,6 @@
     </div>
 </div>
 
-<!-- Modal Tambah Lowongan -->
-<!-- Modal -->
 <div class="modal fade" id="exampleModalCenter">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">

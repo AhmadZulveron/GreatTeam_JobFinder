@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_background_study', function (Blueprint $table) {
+        Schema::create('user_background_studys', function (Blueprint $table) {
             $table->id();
             $table->string('institusi');
             $table->string('gelar');

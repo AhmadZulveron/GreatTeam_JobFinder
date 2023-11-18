@@ -37,7 +37,7 @@
                         class="icon icon-app-store"><img src="/images/pemohon.png" height="16px" alt=""></i><span class="nav-text">Pelamar</span></a>
                 <ul aria-expanded="false">
                     <li><a href="#">Cari Pelamar</a></li>
-                    <li><a href="#" aria-expanded="false">Pemohon</a></li>
+                    <li><a href="pemohon" aria-expanded="false">Pemohon</a></li>
                     <li><a href="#">Diterima</a></li>
                 </ul>
             </li>

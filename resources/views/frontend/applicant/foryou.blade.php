@@ -22,18 +22,22 @@
             </div>
                 {{-- <div class="container rounded-panel p-3" style="max-height: 800px; background-color: #f8f9fa;"> --}}
                     
-                    <div class="container p-0 rounded-panel" style="max-height: 800px; background-color: #f8f9fa;">
-                        @for ($i = 0; $i < 5; $i++)
-                        <div class="pb-2" style="background-color: #f8f9fa;">
+                    <div class="container2 p-0 rounded-panel list-group" style="max-height: 800px; background-color: #6f6f6f;">
+                        @for ($i = 0; $i < 10; $i++)
+                        <div class="pb-2 list-item mb-1" style="background-color: #f8f9fa;">
+                            {{-- <a href="#" class="stretched-link"></a> --}}
                             <div class="card-header">
-                                <a href="#"><div class="card-title w-100">Title</div></a>
+                                <a href="#" class="w-100"><div class="card-title">Title</div></a>
                                 <div class="card-title">Salary</div>
                             </div>
                             <div class="card-body">
+
                                 <div class="tag-container align-items-center m-0">
-                                    <a href="#"><span class="tag">Tag 1</span></a>
-                                    <a href="#"><span class="tag">Tag 2</span></a>
+                                    @for ($j = 0; $j < 10; $j++)
+                                    <a href="#"><span class="tag">Skill</span></a>
+                                    @endfor
                                 </div>
+                                
                                 <div class="d-flex flex-wrap">
                                     <img src="/images/rectangle38.png" alt="">
                                     <div class="flex-row">
@@ -50,7 +54,64 @@
         </div>
         
         <div class="col-md-8" style="background-color: #ECEBEB;">
-            Ffaihfihfehuafhiuafhuh
+                {{-- <div class="pb-2 list-item h-100" style="background-color: #ECEBEB;">
+                    <div class="card-header">
+                        <img class="card-title" src="/images/rectangle38.png" style="min-height: 100px" alt="">
+                        <h2>Nama Lowongan</h2>
+                        <a href="javascript:void()" class="btn btn-primary text-white card-title">Lamar cepat <img src="/images/saved.png" height="24px" alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <div class="tag-container align-items-center m-0">
+                            <a href="#"><span class="tag">Tag 1</span></a>
+                            <a href="#"><span class="tag">Tag 2</span></a>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                            <img src="/images/rectangle38.png" alt="">
+                            <div class="flex-row">
+                                <div class="align-self-start"><p class="card-text text-dark ml-2">Nama Perusahaan</p></div>
+                                <div class="align-self-center"><p class="card-text ml-2">Alamat</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+            <div class="d-flex flex-wrap justify-content-between pt-5 pb-3" style="font-family: KoHo">
+                <div class="nav">
+                    <img src="/images/rectangle38.png" style="height: 100px" alt="">
+                    <div class="flex-row">
+                        <div class="align-self-start"><p class="card-text text-dark ml-2" style="font-size: 30px">Lowongan</p></div>
+                        <div class="align-self-end"><a href="#" class="card-text ml-2" style="font-size: 22px; color: #000;">Perusahaan</a></div>
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="/images/share.png" height="24px" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="/images/save.png" height="24px" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void()" class="btn btn-lamar card-title">Lamar</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container2 pt-5" style="font-family: KoHo; min-height: 500px">
+                <h3>Skill :</h3>
+                <div class="tag-container flex-wrap align-items-center m-0">
+                    @for ($j = 0; $j < 10; $j++)
+                    <a href="#"><span class="tag">Tagar tagar tiger 1</span></a>
+                    @endfor
+                </div>
+                
+                <h3>Deskripsi :</h3>
+                @for($k = 0; $k < 6; $k++)
+                <p style="color: #000">Vivamus ullamcorper metus eu mauris tristique commodo. Nam finibus est nec ipsum semper, a 
+                    pretium nisl rutrum. Etiam auctor condimentum facilisis. Pellentesque tellus sapien, molestie 
+                    at sapien vel, congue elementum ligula. Nam sed bibendum felis, in luctus nulla. Aenean vel sagittis 
+                    velit. Proin dapibus rhoncus gravida. Vestibulum posuere varius convallis. Sed molestie varius urna, 
+                    a volutpat augue rhoncus vel. Donec lobortis dapibus lorem, ac tempor mauris pharetra ac. 
+                    Mauris et orci in est volutpat sollicitudin nec eget risus. Vestibulum sed lacus a nibh lobortis mattis.</p>
+                    @endfor
+            </div>
         </div>
         <button class="btn back-to-top" id="backToTopButton">
             <img src="/images/arrow-up-1.png" alt="" width="54px">

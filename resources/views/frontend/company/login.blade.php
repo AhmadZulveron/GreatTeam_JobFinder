@@ -79,8 +79,8 @@
       <div class="slk">
           <p>Selamat datang kembali</p>
       </div>
-          <form method="POST" action="{{ route('login') }}">
-              @csrf
+          <form method="GET" action="/perusahaan-dashboard">
+              {{-- @csrf --}}
                   <div class="form-group form-floating mb-3">
                       <input class="email-input form-control @error('email') is-invalid @enderror"
                       type="email" placeholder="E-mail" name="email"
@@ -112,6 +112,9 @@
                   </div>
               {{-- <div class="form-group"> --}}
                   <button type="submit" class="btn btn-login w-100">Login</button>
+                  <div class="mt-5">
+                    <h6>Back to <a href="/">Home</a></h6>
+                  </div>
               {{-- </div> --}}
           </form>
       </div>

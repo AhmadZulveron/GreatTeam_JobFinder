@@ -16,8 +16,37 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/resp.css">
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
     
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
+
+    <style>
+        .btn-lamar{
+            background: #7694FD;
+            border: solid #7694FD;
+            color: white;
+            height: 37px;
+        }
+
+        .btn-lamar:hover {
+            border: solid #7694FD;
+            color: black;
+        }
+
+        .container-2{
+            overflow-y: auto;
+            max-height: 590px;
+            white-space: normal;
+        }
+
+        .card a, a:hover {
+            text-decoration: none;
+        }
+
+        div a:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
     @include('frontend.layouts.header')

@@ -30,7 +30,7 @@
             color: white;
             border: 3px solid #25477B ;
             background: #3A6CB9;
-            /* padding: 0.75rem 3em; */
+            padding: 0.75rem 3em;
             transition: background-color 250ms;
 
             isolation: isolate;
@@ -49,7 +49,7 @@
             content: "";
             position: absolute;
             z-index: -1;
-            background: #3a6db998;
+            background: #192029;
             /* background: hotpink; */
             width: 10%;
             aspect-ratio: 1;
@@ -65,7 +65,11 @@
             transform: scale(15);
             opacity: 1;
             
-            transition: transform 300ms, opacity 100ms;
+            transition: transform 500ms, opacity 100ms;
+        }
+
+        .btn-login:active{
+            box-shadow: 10px 10px 1px black;
         }
 
    </style>
@@ -80,7 +84,7 @@
             <div class="slk">
                 <p>Selamat datang kembali</p>
             </div>
-                <form method="POST" action="{{ route('login') }}">
+                <form method="POST" action="{{route('login')}}">
                     @csrf
                         <div class="form-group form-floating mb-3">
                             <input class="email-input form-control @error('email') is-invalid @enderror"
@@ -112,7 +116,10 @@
                             </div>
                         </div>
                     {{-- <div class="form-group"> --}}
-                        <button type="submit" class="btn btn-login w-100">Login</button>
+                        <button type="submit" class="btn-login w-100">Login</button>
+                        <div class="mt-5">
+                            <h6>Back to <a href="/">Home</a></h6>
+                        </div>
                     {{-- </div> --}}
                 </form>
             </div>

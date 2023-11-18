@@ -3,23 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\LowonganPerusahaan;
 
-class LowonganPerusahaanController extends Controller
+class UserProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        // return view('frontend.company.lowongan.index', ['lowongans'=>LowonganPerusahaan::latest()->paginate(10)]);
-        return view('frontend.company.lowongan.index');
+        return view('frontend.applicant.jenisjob');
     }
 
-    public function index2()
-    {
-        // return view('frontend.company.dash', ['lowongan'=>LowonganPerusahaan::latest()->paginate(10)]);
-        return view('frontend.company.dash');
+    public function profile(){
+        return view('frontend.applicant.profile');
     }
 
     /**
@@ -36,7 +32,7 @@ class LowonganPerusahaanController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'title' => 'required',
+            'jenis_pekerjaan' => 'required',
             'description' => 'required',
             'location' => 'required',
             'salary' => 'required',
@@ -60,9 +56,7 @@ class LowonganPerusahaanController extends Controller
      */
     public function edit(string $id)
     {
-        return view('frontend.company.lowongan.index',[
-            'lowongans'=>LowonganPerusahaan::find($id)
-        ]);
+        //
     }
 
     /**
@@ -70,16 +64,7 @@ class LowonganPerusahaanController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $validatedData=$request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'location' => 'required',
-            'salary' => 'required',
-            
-        ]);
-
-        LowonganPerusahaan::where('id',$id)->update($validatedData);
-        return redirect('/perusahaan-lowongan')->with('pesan','Data Berhasil di Update');
+        //
     }
 
     /**
@@ -87,7 +72,6 @@ class LowonganPerusahaanController extends Controller
      */
     public function destroy(string $id)
     {
-        LowonganPerusahaan::destroy ($id);
-        return redirect('/perusahaan-lowongan')->with('pesan', 'Data berhasil dihapus');
+        //
     }
 }

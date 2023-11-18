@@ -1,13 +1,13 @@
 $(document).ready(function() {
     var selectedTags = [];
 
-    $('#tags').select2({ // Menggunakan id yang sesuai
+    $('#tags').select2({
         tags: true,
         tokenSeparators: [',', ' '],
         placeholder: 'Pilih atau tambahkan tag',
     });
 
-    $('#tags').on('change', function() { // Menggunakan id yang sesuai
+    $('#tags').on('change', function() {
         selectedTags = $('#tags').select2('data').map(function(tag) {
             return tag.text;
         });

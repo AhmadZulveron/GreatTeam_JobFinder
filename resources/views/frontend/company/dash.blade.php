@@ -60,7 +60,7 @@
                                 <th>Date</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        {{-- <tbody>
                             @foreach ($lowongan as $items)
                             <tr>
                                 <td>{{$items->title}}</td>
@@ -70,7 +70,7 @@
                                 <td>{{$items->created_at}}</td>
                             </tr>
                             @endforeach
-                        </tbody>
+                        </tbody> --}}
                     </table>
                 </div>
             </div>

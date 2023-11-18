@@ -70,13 +70,13 @@
           @else
               <li class="nav-item dropdown">
                 <a class="nav-link avatar-with-name" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#">
-                  {{ Auth::user()->first_name }}{{ Auth::user()->last_name }}
+                  {{-- {{ Auth::userProfile()->first_name }}{{ Auth::userProfile()->last_name }} --}}
                   {{-- username --}}
                   <img src="/images/Windows_10_Default_Profile_Picture.svg.png" width="36px" class="d-inline-block align-top" alt="">
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" style="font-size: 1.0rem">
                   <div class="dropdown-item d-flex justify-content-between">
-                    <a href="#">My Profile</a>
+                    <a href="/profile">My Profile</a>
                     <img class="align-self-center" src="/icons/dev-icon-233-people.svg" height="15px" alt="">
                   </div>
                   <div class="dropdown-divider"></div>

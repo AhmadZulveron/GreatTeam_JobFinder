@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginPelamarController;
 use App\Http\Controllers\LoginPerusahaanController;
 use App\Http\Controllers\LowonganPerusahaanController;
+use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ApplyingJobsController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -34,9 +36,9 @@ Route::get('/admin', function () {
 
 // setting up profile
 
-Route::get('/your-profile', function () {
-    return view('frontend.applicant.jenisjob');
-})->middleware(['auth', 'verified']);
+Route::resource('/your-profile', UserProfileController::class);
+
+Route::get('/profile', [UserProfileController::class, 'profile']);
 
 Route::get('/upload', function(){
     return view('frontend.applicant.upload');
@@ -48,7 +50,7 @@ Route::get('/upload', function(){
 Route::get('/registrasi', [AuthController::class, 'register']);
 Route::post('/registrasi', [AuthController::class, 'registerProses']);
 Route::get('/email/verify', function () {
-    return view('auth.verify-email');
+    return view('auth.verify');
 })->middleware('auth')->name('verification.notice');
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
@@ -59,9 +61,19 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 
 // end register //
 
+Route::get('/login', [LoginPelamarController::class,'login'])->name('login');
 
+Route::post('/login', [LoginPelamarController::class,'authenticate']);
+
+Route::post('/logout', [LoginPelamarController::class,'logout']);
+
+//pdf
+Route::get('/export_pemohon_pdf', [ApplyingJobsController::class,'export_pemohon'])->name('export_pemohon');
+//endpdf
 
 Route::get('perusahaan-dashboard', [LowonganPerusahaanController::class, 'index2']);
+
+Route::resource('pemohon', ApplyingJobsController::class);
 
 Route::get('/perusahaan', function () {
     return view('frontend.applicant.perusahaan');
@@ -88,7 +100,7 @@ Route::get('/lowongan-bookmark', function () {
 })->middleware(['auth', 'verified']);
 
 
-Auth::routes(['verify' => true]);
+// Auth::routes(['verify' => true]);
 
 Route::resource('perusahaan-lowongan', LowonganPerusahaanController::class);
 

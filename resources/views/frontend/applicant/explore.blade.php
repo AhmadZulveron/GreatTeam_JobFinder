@@ -21,7 +21,7 @@
 <div class="container-fluid" style="background-color: #D2DCFF; min-height: 100vh">
     <div class="col-md-4 pt-3">
         <div class="input-group">
-            <input class="form-control py-2 rounded-pill mr-1 pr-5" type="search" placeholder="Search" id="example-search-input">
+            <input class="form-control py-2 rounded-pill" type="search" placeholder="Search" id="example-search-input">
             <span class="input-group-append">
                 <button class="btn rounded-pill border-0 ml-n5" type="button">
                     <i class="fa fa-search"><img src="/images/search.png" width="24px" alt=""></i>
@@ -37,7 +37,9 @@
             <div class="row">
                 @for ($i = 0; $i < 5; $i++)
                 <div class="col-md-4">
+                    
                     <div class="card">
+                        <a href="#" class="spectrum-a stretched-link"></a>
                         <div class="card-header">
                             <a href="#"><div class="card-title w-100">Title</div></a>
                             <div class="card-title">Salary</div>
@@ -56,6 +58,7 @@
                                 
                             </div>
                         </div>
+                        
                         <div class="card-footer d-sm-flex justify-content-between">
                             <div class="card-footer-link mb-4 mb-sm-0">
                                 <p class="card-text text-seccondary d-inline fs-9">Last updated 3 mins ago</p>

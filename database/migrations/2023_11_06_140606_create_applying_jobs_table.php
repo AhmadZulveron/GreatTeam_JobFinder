@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('applying_jobs', function (Blueprint $table) {
             $table->id();
-            $table->string('jobs');
-            $table->foreignId('users_id');
+            $table->string('perusahaan_job_share_id');
+            $table->string('user_id');
             $table->timestamps();
         });
     }
