@@ -141,26 +141,33 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-striped table-responsive-sm">
+                <table id="myTable" class="display table table-striped table-responsive-sm">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>job_title</th>
-                            <th>description</th>
-                            <th>location</th>
-                            <th>salary</th>
+                            <th>posisi</th>
+                            <th>gaji_min</th>
+                            <th>gaji_max</th>
+                            <th>kategori</th>
+                            <th>skill</th>
+                            <th>pengalaman</th>
+                            <th>syarat_file</th>
                             <th>action</th>
                         </tr>
                     </thead>
-                    {{-- <tbody>
+                    <tbody>
                         @foreach ($lowongans as $item)
                         <tr>
                             <th>{{$loop->iteration}}</th>
-                            <td>{{$item->title}}</td>
-                            <td>{{$item->description}}</td>
-                            <td>{{$item->location}}</td>
-                            <td class="color-primary">{{$item->salary}}</td>
-                            <td class="color-primary">
+                            <td>{{$item->posisi}}</td>
+                            <td>{{$item->gaji_min}}</td>
+                            <td>{{$item->gaji_max}}</td>
+                            <td>{{$item->kategori}}</td>
+                            <td>{{$item->skill}}</td>
+                            <td>{{$item->pengalaman}}</td>
+                            <td>{{$item->syarat_file}}</td>
+                            {{-- <td class="color-primary">{{$item->salary}}</td> --}}
+                            <td class="color-primary td-center">
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter2-{{ $item->id }}"><span data-feather="edit"></span> Update</button>
                                 <form action="/perusahaan-lowongan/{{$item->id}}" method="post" class="d-inline">
                                     @csrf
@@ -211,7 +218,7 @@
                             </div>
                         </div>
                         @endforeach
-                    </tbody> --}}
+                    </tbody>
                 </table>
             </div>
         </div>

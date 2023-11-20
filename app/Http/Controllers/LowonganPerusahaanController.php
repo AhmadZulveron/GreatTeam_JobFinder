@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\LowonganPerusahaan;
+use App\Models\PerusahaanJobShare;
 
 class LowonganPerusahaanController extends Controller
 {
@@ -12,8 +12,8 @@ class LowonganPerusahaanController extends Controller
      */
     public function index()
     {
-        // return view('frontend.company.lowongan.index', ['lowongans'=>LowonganPerusahaan::latest()->paginate(10)]);
-        return view('frontend.company.lowongan.index');
+        return view('frontend.company.lowongan.index', ['lowongans'=>PerusahaanJobShare::latest()->paginate(10)]);
+        // return view('frontend.company.lowongan.index');
     }
 
     public function index2()

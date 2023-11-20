@@ -10,19 +10,16 @@
     <div class="card">
         <div class="card-header align-items-start">
             <h4 class="card-title mt-1">Data Pemohon</h4>
-            <div class="card-title">
-                {{$pemohons->links()}} 
-            </div>
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-striped table-responsive-sm">
+                <table id="myTable" class="display table table-striped table-responsive-sm">
                     <thead>
                         <tr>
                             <th>#</th>
                             <th>jobs</th>
                             <th>pemohon</th>
-                            {{-- <th>aksi</th> --}}
+                            <th>aksi</th>
                         </tr>
                     </thead>
                     <tbody style="color: black">
@@ -31,29 +28,31 @@
                             <th>{{$loop->iteration}}</th>
                             <td>{{$pemohon->perusahaan_job_share_id}}</td>
                             <td>{{$pemohon->user_id}}</td>
-                            {{-- <td class="color-primary">
-                                <form action="/perusahaan-lowongan/{{$pemohon->id}}" method="post" class="d-inline">
+                            <td class="color-primary td-center">
+                                <form action="/perusahaan-lowongan/{{$pemohon->id}}" method="GET" class="d-inline">
                                     @csrf
-                                    @method('DELETE')
-                                    <button type="submit" id="deleteButton" class="btn btn-danger btn sweet-confirm" onclick="return confirm('Yakin ingin Hapus data?')">
-                                        <span data-feather="trash-2"></span> Delete
+                                    <button type="submit" id="deleteButton" class="btn btn-primary btn sweet-confirm">
+                                        <span data-feather="trash-2"></span> Detail
                                     </button>
                                 </form>
-                            </td> --}}
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
         </div>
-        <div class="card-footer">
+        <div class="card-footer text-center">
+            <div class="card-title">
+                {{-- {{$pemohons->links()}}  --}}
+            </div>
             <a href="{{ route('export_pemohon') }}" class="btn btn-success text-white float-right">Export PDF</a>
             {{-- data-toggle="modal" data-target="#exampleModalCenter" --}}
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="exampleModalCenter">
+{{-- <div class="modal fade" id="exampleModalCenter">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -85,7 +84,7 @@
                             @else
                             <option value="{{$user->id}}">
                                 {{$user->id}}
-                                {{-- {{ optional($user->profile)->last_name }} --}}
+                                {{ optional($user->profile)->last_name }}
                             </option>
                             @endif
                         @endforeach
@@ -99,6 +98,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 @endsection

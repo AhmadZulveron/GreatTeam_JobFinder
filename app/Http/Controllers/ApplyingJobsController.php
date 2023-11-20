@@ -16,7 +16,7 @@ class ApplyingJobsController extends Controller
     public function index()
     {
         return view('frontend.company.pemohon.index', [
-            'pemohons'=>ApplyingJobs::latest()->paginate(10),
+            'pemohons'=>ApplyingJobs::all(),
             'jobs'=>PerusahaanJobShare::all(),
             'users'=>User::with('userProfile')->get()]);
     }
